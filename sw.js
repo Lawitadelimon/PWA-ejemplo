@@ -1,13 +1,14 @@
 
 //1. Nombre del service worker y los archivos a cachear
 const CACHE_NAME = "mi-cache"; //sustituir nombre real de la PWA
+const BASE_PATH = "PWA-ejemplo/"; //ruta base de la PWA
 const urlsToCache = [//lista de archivos a cachear
-    "index.html",
-    "manifest.json",
-    "style.css",
-    "offline.html", // crear pagina offline para cuando no haya conexion
-    "icons/icon-192x192.png",
-    "icons/icon-512x512.png"
+    `index.html`,
+    `manifest.json`,
+    `style.css`,
+    `offline.html`, // crear pagina offline para cuando no haya conexion
+    `icons/icon-192x192.png`,
+    `icons/icon-512x512.png`
 ];
 
 //2. Evento INSTALL -> se ejecuta al instalar el servie worker, se cachean
