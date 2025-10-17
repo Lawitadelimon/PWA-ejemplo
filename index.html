@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primera PWA</title>
 
-    <base href="/PWA-ejemplo/">
+    <base href="./">
 
     <!--vincular el manifest -->
     <link rel="manifest" href="manifest.json">
@@ -20,14 +20,14 @@
     <button onclick="alert('Hola desde la PWA')">Click aqui</button>
 
     <ul>
-        <li><a href="PWA-ejemplo/index.html">Inicio</a></li>
-        <li><a href="PWA-ejemplo/login.html">Iniciar  Sesion</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.html">Iniciar  Sesion</a></li>
     </ul>
 
     <!-- Registrat el service worker -->
     <script>
         if("ServiceWorker" in navigator){
-            navigator.serviceWorker.register('/PWA-ejemplo/sw.js')
+            navigator.serviceWorker.register('./sw.js')
                 .then(reg => console.log("Service Worker registrado"))
                 .catch(err => console.log("Error al registrar el Service Worker"));
         }
